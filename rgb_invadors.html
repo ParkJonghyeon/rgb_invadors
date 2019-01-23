@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset = "utf-8"/>
+		<title>RGB Invadors</title>
+		<script src="rgb_invadors.js"></script>
+		<link type = "text/css" rel = "stylesheet" href = "rgb_invadors.css"/>
+	</head>
+	<body onload="init()">
+		<!-- 배경 출력을 위한 canvas -->
+		<canvas id="background" width="1000" height="720">
+			Your browser does not support canvas. Please try again with a different browser.
+		</canvas>
+		<!-- 적 객체와 탄환이 그려질 canvas -->
+		<canvas id="main" width="1000" height="720">
+		</canvas>
+		<!-- 플레이어 객체가 그려질 canvas (단 플레이어가 움직일 수 있는 영역은 극히 일부분) -->
+		<canvas id="player" width="1000" height="720">
+		</canvas>
+		<div class="score">
+			<p>HIGH SCORE: <span id="highScore"></span></p>
+			<p>SCORE: <span id="score"></span></p>
+			<p>LIFE: <span id="life"></span></p>
+		</div>
+		<div class="game_over" id="game_over">
+			<p>GAME OVER</p>
+			<p>SCORE: <span id="result_score"></span></p>
+			<p id="renewalHighScore">High Score!!</p>
+			<p><span onclick="game.restart()">Restart</span></p>
+		</div>
+		<div class="loading" id="loading">
+			<p>LOADING...</p>
+			<p><span id="ready_start" onclick="game.ready()"></span></p>
+		</div>
+	</body>
+</html>

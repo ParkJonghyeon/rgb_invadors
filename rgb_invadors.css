@@ -1,0 +1,68 @@
+canvas {
+	position: absolute;
+	top: 0px;
+	left: 0px;
+	background: transparent;
+}
+/*
+ * z-index 속성으로 인해 이미지가 겹쳐지더라도 가려지지 않고, 
+ * z-index 값이 높은 요소가 우선적으로 상단에 위치하게 된다. 
+ */
+#background {
+	z-index: -2;
+}
+#main {
+	z-index: -1;
+}
+#player {
+	z-index: 0;
+}
+.score {
+	position: absolute;
+	top: 5px;
+	left: 840px;
+	color: #FF7F00;
+	text-align: right;
+	font-family: Helvetica, sans-serif;
+	cursor: default; 
+	/*default: 기본 커서 모양, pointer: 손가락 커서 모양*/
+}
+.game_over {
+	position: absolute;
+	top: 280px;
+	left: 460px;
+	color: #FF7F00;
+	font-family: Helvetica, sans-serif;
+	font-size: 30px;
+	cursor: default;
+	display: none;
+}
+.game_over #result_score {
+	font-size: 30px;
+	cursor: default;
+	position: relative;
+}
+.game_over #renewalHighScore {
+	visibility: hidden;
+}
+.game_over span {
+	font-size: 20px;
+	cursor: pointer;
+	position: relative;
+	left: 50px;
+}
+.game_over span span:hover {
+	color: #FFD700;
+}
+.loading {
+	position: absolute;
+	top: 280px;
+	left: 460px;
+	color: #FF7F00;
+	font-family: Helvetica, sans-serif;
+	font-size: 30px;
+	cursor: default;
+}
+.loading span:hover {
+	color: #FFD700;
+}
